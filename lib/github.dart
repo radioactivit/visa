@@ -13,7 +13,7 @@ class GithubAuth extends Visa {
   final Debug _debug = Debug(prefix: 'In GithubAuth ->');
 
   @override
-  SimpleAuth? visa;
+  late SimpleAuth visa;
 
   GithubAuth() {
     visa = SimpleAuth(
@@ -23,7 +23,7 @@ class GithubAuth extends Visa {
         /// for a token. This function gets the token and
         /// Sends a request to the user profwile api endpoint.
         /// Returns an AuthData object.
-        getAuthData: (Map<String, String?> oauthData) async {
+        getAuthData: (Map<String, String> oauthData) async {
           if (debugMode) _debug.info('OAuth Data: $oauthData');
 
           await _getToken(oauthData);
@@ -108,7 +108,7 @@ class GithubAuth extends Visa {
 
     if (debugMode) _debug.info('Returned Profile Json: $profileJson');
 
-    if (profileJson['name'] != null){
+    if (profileJson['name'] != null) {
       final List<String> name = profileJson['name'].split(' ');
       profileJson['first_name'] = name[0];
       profileJson['last_name'] = name[1];

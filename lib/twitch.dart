@@ -13,7 +13,7 @@ class TwitchAuth extends Visa {
   final Debug _debug = Debug(prefix: 'In TwitchAuth ->');
 
   @override
-  SimpleAuth? visa;
+  late SimpleAuth visa;
 
   TwitchAuth() {
     visa = SimpleAuth(

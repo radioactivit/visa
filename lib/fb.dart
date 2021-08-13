@@ -13,7 +13,7 @@ class FacebookAuth extends Visa {
   final Debug _debug = Debug(prefix: 'In FacebookAuth ->');
 
   @override
-  SimpleAuth? visa;
+  late SimpleAuth visa;
 
   FacebookAuth() {
     visa = SimpleAuth(

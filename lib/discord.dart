@@ -13,7 +13,7 @@ class DiscordAuth extends Visa {
   final Debug _debug = Debug(prefix: 'In DiscordAuth ->');
 
   @override
-  SimpleAuth? visa;
+  late SimpleAuth visa;
 
   DiscordAuth() {
     visa = SimpleAuth(

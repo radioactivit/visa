@@ -13,7 +13,7 @@ class LinkedInAuth extends Visa {
   final Debug _debug = Debug(prefix: 'In LinkedInAuth ->');
 
   @override
-  SimpleAuth? visa;
+  late SimpleAuth visa;
 
   LinkedInAuth() {
     visa = SimpleAuth(
@@ -24,7 +24,7 @@ class LinkedInAuth extends Visa {
         /// for a token. This function gets the token and
         /// Sends a request to the user profile api endpoint.
         /// Returns an AuthData object.
-        getAuthData: (Map<String, String?> oauthData) async {
+        getAuthData: (Map<String, String> oauthData) async {
           if (debugMode) _debug.info('OAuth Data: $oauthData');
 
           await _getToken(oauthData);
@@ -144,7 +144,8 @@ class LinkedInAuth extends Visa {
     String? email;
     List<dynamic> elements = emailJson['elements'];
 
-    for (Map<String, dynamic> contact in elements as Iterable<Map<String, dynamic>>) {
+    for (Map<String, dynamic> contact
+        in elements as Iterable<Map<String, dynamic>>) {
       if (contact['type'] == 'EMAIL' && contact['primary'] == true) {
         email = contact['handle~']['emailAddress'];
         break;

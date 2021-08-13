@@ -1,11 +1,11 @@
 name: visa
 description: Visa is an OAuth 2.0 package that makes it super
   easy to add third party authentication to flutter apps.
-version: 2.0.1
+version: 2.0.2
 repository: https://github.com/e-oj/visa
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -25,7 +25,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
 # To add assets to your package, add an assets section, like this:
 # assets:
 #   - images/a_dot_burr.jpeg
