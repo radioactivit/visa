@@ -5,15 +5,15 @@ version: 2.0.1
 repository: https://github.com/e-oj/visa
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  hexcolor: ^2.0.3
+  hexcolor: ^2.0.4
   http: ^0.13.3
-  webview_flutter: ^2.0.4
+  webview_flutter: ^2.0.12
 
 # TODO - move hexcolor to dev_dependencies
 dev_dependencies:
