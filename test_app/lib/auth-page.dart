@@ -62,7 +62,7 @@ class AuthPage extends StatelessWidget {
 
     switch (thirdParty) {
       case 'fb':
-        return fbAuth.visa.authenticate(
+        return fbAuth.visa!.authenticate(
             clientID: '139732240983759',
             redirectUri: 'https://www.e-oj.com/oauth',
             scope: 'public_profile,email',
@@ -70,7 +70,7 @@ class AuthPage extends StatelessWidget {
             onDone: done);
 
       case 'twitch':
-        return twitchAuth.visa.authenticate(
+        return twitchAuth.visa!.authenticate(
             clientID: 'fx9d4xcwzswjzwt8cfzj8lh8paphdu',
             redirectUri: 'https://www.e-oj.com/oauth',
             state: 'twitchAuth',
@@ -78,7 +78,7 @@ class AuthPage extends StatelessWidget {
             onDone: done);
 
       case 'discord':
-        return discordAuth.visa.authenticate(
+        return discordAuth.visa!.authenticate(
             clientID: '785323970999091211',
             redirectUri: 'https://www.e-oj.com/oauth',
             state: 'discordAuth',
@@ -86,7 +86,7 @@ class AuthPage extends StatelessWidget {
             onDone: done);
 
       case 'github':
-        return githubAuth.visa.authenticate(
+        return githubAuth.visa!.authenticate(
             clientID: 'e6a01102910a7a9d694e',
             clientSecret: 'a532ab8c42e9f884f276846fc7f32e069fc0133d',
             redirectUri: 'https://www.e-oj.com/oauth',
@@ -95,7 +95,7 @@ class AuthPage extends StatelessWidget {
             onDone: done);
 
       case 'google':
-        return googleAuth.visa.authenticate(
+        return googleAuth.visa!.authenticate(
             clientID: '463257508739-c03fcu5pej7odrci1tclk53qdd'
                 'tsa0vo.apps.googleusercontent.com',
             redirectUri: 'https://www.e-oj.com/oauth',
@@ -105,7 +105,7 @@ class AuthPage extends StatelessWidget {
             onDone: done);
 
       case 'linkedIn':
-        return linkedInAuth.visa.authenticate(
+        return linkedInAuth.visa!.authenticate(
             clientID: '78lyweifjuavwi',
             clientSecret: 'SbUU4yfIdEghTeb8',
             redirectUri: 'https://www.e-oj.com/oauth',
@@ -114,7 +114,7 @@ class AuthPage extends StatelessWidget {
             onDone: done);
 
       case 'spotify':
-        return spotifyAuth.visa.authenticate(
+        return spotifyAuth.visa!.authenticate(
             clientID: '5c711cec6f9740fc9b91cca9461cefb8',
             clientSecret: '8fd2691a84364c8ea30e31e1198c327e',
             redirectUri: 'https://www.e-oj.com/oauth',

@@ -14,7 +14,7 @@ class GoogleAuth extends Visa {
   String personFields;
 
   @override
-  late SimpleAuth visa;
+  SimpleAuth? visa;
 
   GoogleAuth({this.personFields = ""}) {
     personFields = _getPersonFields(personFields);

@@ -13,7 +13,7 @@ class SpotifyAuth extends Visa {
   final Debug _debug = Debug(prefix: 'In SpotifyAuth ->');
 
   @override
-  late SimpleAuth visa;
+  SimpleAuth? visa;
 
   SpotifyAuth() {
     visa = SimpleAuth(
@@ -26,7 +26,7 @@ class SpotifyAuth extends Visa {
         /// calls a function which Sends a request to the
         /// user profile api endpoint. Returns an AuthData
         /// object.
-        getAuthData: (Map<String, String> oauthData) async {
+        getAuthData: (Map<String, String?> oauthData) async {
           if (debugMode) _debug.info('OAuth Data: $oauthData');
 
           await _getToken(oauthData);
